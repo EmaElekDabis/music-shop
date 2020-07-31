@@ -1,0 +1,134 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@include global;
+
+body {
+    width: 60%;
+    margin: 0 auto;
+    background-image: url('../images/bg.jpg');
+}
+
+header {
+    background-color: rgb(175, 26, 26);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    @include clearfix;
+
+    h1 {
+        float: left;
+        font-family: 'Lobster', cursive;
+        font-size: 70px;
+        padding: 20px 40px;
+    }
+
+    nav {
+        float: right;
+        padding: 0 40px;
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                background-color: black;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                margin: 0 5px;
+
+                a {
+                    text-decoration: none;
+                    padding: 5px;
+
+                    img {
+                        width: 30px;
+                        padding-top: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: black;
+    margin: 20px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .wellcome {
+        @include clearfix;
+
+        img {
+            width: 40%;
+            float: left;
+        }
+    
+        h2 {
+            background-color: white;
+            float: right;
+            font-family: 'Lobster', cursive;
+            padding: 5px 10px;
+            margin: 30px 30px 15px;
+        }
+    
+        p {
+            float: right;
+            color: white;
+            width: 55%;
+            text-align: justify;
+            margin-right: 30px;
+        }
+    }
+
+    .dates {
+        @include clearfix;
+        color: white;
+        padding: 30px;
+
+        .box {
+            float: left;
+            width: 32.5%;
+            padding-right: 5px;
+            border-right: 1px solid white;
+            margin-right: 6px;
+    
+            h3 {
+                color: white;
+                background-color: rgb(175, 26, 26);
+                font-family: 'Lobster', cursive;
+                padding: 5px;
+            }
+    
+            p {
+                text-align: justify;
+                padding: 5px 0;
+            }
+
+            a {
+                color: black;
+                background-color: white;
+                text-decoration: none;
+                padding: 3px 15px;
+                font-weight: bold;
+            }
+
+            &:last-child {
+                padding: 0;
+            margin: 0;
+            border: none;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px 0;
+
+    a {
+        text-decoration: none;
+    }
+}
